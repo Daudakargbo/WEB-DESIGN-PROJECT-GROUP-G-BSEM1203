@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Sierra Walmart</title>
+  <meta name="description" content="Get in touch with Sierra Walmart. We're here to help with your shopping needs across Sierra Leone.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🛒</span>
+        Sierra<span class="highlight">Walmart</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>`n        <a href="sell.html">Sell</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+        <a href="cart.html" class="btn-icon" title="Shopping Cart">
+          🛒 <span class="cart-count" style="display:none">0</span>
+        </a>
+        <a href="login.html" class="btn-icon nav-login-link" title="Account">👤</a>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Get in touch with our team</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Contact</span>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div>
+          <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:var(--space-sm)" class="reveal">Get In Touch</h2>
+          <p style="color:var(--text-secondary);margin-bottom:var(--space-2xl);line-height:1.7" class="reveal">
+            Have a question, suggestion, or need assistance? Our team is ready to help you. Reach out through any of the channels below or send us a message.
+          </p>
+
+          <div class="contact-info-cards stagger-children">
+            <div class="contact-info-card">
+              <div class="info-icon">📍</div>
+              <div>
+                <h3>Our Office</h3>
+                <p>15 Siaka Stevens Street<br>Freetown, Sierra Leone</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon">📞</div>
+              <div>
+                <h3>Phone Number</h3>
+                <p>+232 76 123 4567<br>+232 77 987 6543</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon">✉️</div>
+              <div>
+                <h3>Email Address</h3>
+                <p>info@sierrawalmart.com<br>support@sierrawalmart.com</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon">🕐</div>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday – Saturday: 8:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map reveal">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-13.25,8.46,-13.22,8.49&layer=mapnik&marker=8.475,-13.235"
+              allowfullscreen
+              loading="lazy"
+              title="Sierra Walmart Location Map">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card reveal">
+          <h2 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:var(--space-xl)">Send Us a Message</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <select id="contact-subject" class="form-control">
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="order">Order Support</option>
+                <option value="delivery">Delivery Issue</option>
+                <option value="return">Returns & Refunds</option>
+                <option value="partnership">Business Partnership</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message *</label>
+              <textarea id="contact-message" class="form-control" placeholder="Write your message here..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <h2 class="section-title reveal">Common Questions</h2>
+      <p class="section-subtitle reveal">Quick answers to common inquiries</p>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I track my order?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Once your order is shipped, you will receive an SMS with tracking details. You can also contact our support team for order updates.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is the delivery time?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Delivery within Freetown takes 1-2 business days. For other districts, delivery takes 3-5 business days depending on location.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer bulk/wholesale pricing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! For bulk orders and wholesale inquiries, please contact us at partnerships@sierrawalmart.com or call +232 76 123 4567.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🛒 Sierra<span class="highlight">Walmart</span></div>
+          <p>Sierra Leone's premier online marketplace. Quality products delivered to your doorstep.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="Instagram">📸</a>
+            <a href="#" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a>`n        <a href="sell.html">Sell</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?search=Electronics">Electronics</a></li>
+            <li><a href="products.html?search=Fashion">Fashion</a></li>
+            <li><a href="products.html?search=Groceries">Groceries</a></li>
+            <li><a href="products.html?search=Home">Home & Kitchen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 15 Siaka Stevens St, Freetown</li>
+            <li>📞 +232 76 123 4567</li>
+            <li>✉️ info@sierrawalmart.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sierra Walmart. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <div class="toast-container"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

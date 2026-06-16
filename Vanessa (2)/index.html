@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierra Walmart – Online Shopping in Sierra Leone</title>
+  <meta name="description" content="Sierra Walmart is Sierra Leone's premier online marketplace. Shop electronics, fashion, groceries and more with delivery across Sierra Leone.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="loader"></div>
+    <p>Loading Sierra Walmart...</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🛒</span>
+        Sierra<span class="highlight">Walmart</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>`n        <a href="sell.html">Sell</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+        <a href="cart.html" class="btn-icon" title="Shopping Cart">
+          🛒
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+        <a href="login.html" class="btn-icon nav-login-link" title="Account">👤</a>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        🇸🇱 Sierra Leone's #1 Online Marketplace
+      </div>
+      <h1>Shop Smarter,<br>Live <span class="text-gold">Better</span></h1>
+      <p class="hero-desc">
+        Discover thousands of products from electronics to groceries, delivered right to your doorstep across Sierra Leone. Quality products, affordable prices.
+      </p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-accent btn-lg">Shop Now →</a>
+        <a href="about.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.3);color:white">Learn More</a>
+      </div>
+      <form class="hero-search" id="hero-search-form">
+        <input type="text" placeholder="Search for products, brands, categories..." aria-label="Search products">
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-value">10K+</div>
+          <div class="stat-label">Products</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-value">5K+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-value">16</div>
+          <div class="stat-label">Districts Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <h2 class="section-title reveal">Shop by Category</h2>
+      <p class="section-subtitle reveal">Browse our wide range of product categories</p>
+      <div class="categories-grid stagger-children">
+        <a href="products.html?search=Electronics" class="category-card">
+          <div class="cat-icon">📱</div>
+          <h3>Electronics</h3>
+        </a>
+        <a href="products.html?search=Fashion" class="category-card">
+          <div class="cat-icon">👗</div>
+          <h3>Fashion</h3>
+        </a>
+        <a href="products.html?search=Groceries" class="category-card">
+          <div class="cat-icon">🛒</div>
+          <h3>Groceries</h3>
+        </a>
+        <a href="products.html?search=Home" class="category-card">
+          <div class="cat-icon">🏠</div>
+          <h3>Home & Kitchen</h3>
+        </a>
+        <a href="products.html?search=Beauty" class="category-card">
+          <div class="cat-icon">💄</div>
+          <h3>Beauty</h3>
+        </a>
+        <a href="products.html?search=Sports" class="category-card">
+          <div class="cat-icon">⚽</div>
+          <h3>Sports & Fitness</h3>
+        </a>
+        <a href="products.html?search=Agriculture" class="category-card">
+          <div class="cat-icon">🌿</div>
+          <h3>Agriculture</h3>
+        </a>
+        <a href="products.html?search=School" class="category-card">
+          <div class="cat-icon">📚</div>
+          <h3>School Supplies</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section" style="background:var(--bg-secondary)" id="featured-products">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Products</h2>
+      <p class="section-subtitle reveal">Our handpicked selection of top products for you</p>
+      <div class="products-grid" id="featured-grid"></div>
+      <div style="text-align:center;margin-top:var(--space-2xl)" class="reveal">
+        <a href="products.html" class="btn btn-primary btn-lg">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section class="section" id="deals">
+    <div class="container">
+      <h2 class="section-title reveal">Special Offers</h2>
+      <p class="section-subtitle reveal">Don't miss these amazing deals</p>
+      <div class="deals-grid stagger-children">
+        <div class="deal-card">
+          <div class="deal-discount">30%</div>
+          <h3>Electronics Sale</h3>
+          <p>Save big on smartphones, laptops, and accessories. Limited time offer!</p>
+          <a href="products.html?search=Electronics" class="btn btn-accent">Shop Electronics →</a>
+        </div>
+        <div class="deal-card" style="background:linear-gradient(135deg, #1a6b3c, #0d4a2a)">
+          <div class="deal-discount">25%</div>
+          <h3>Fashion Week</h3>
+          <p>Trendy clothing and shoes at unbeatable prices. Free delivery on orders over SLE 500,000.</p>
+          <a href="products.html?search=Fashion" class="btn btn-accent">Shop Fashion →</a>
+        </div>
+        <div class="deal-card" style="background:linear-gradient(135deg, #7c3aed, #4c1d95)">
+          <div class="deal-discount">20%</div>
+          <h3>Back to School</h3>
+          <p>Equip your students with quality school supplies and bags at great prices.</p>
+          <a href="products.html?search=School" class="btn btn-accent">Shop Supplies →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--bg-secondary)" id="testimonials">
+    <div class="container">
+      <h2 class="section-title reveal">What Our Customers Say</h2>
+      <p class="section-subtitle reveal">Real reviews from happy customers across Sierra Leone</p>
+      <div class="testimonials-grid stagger-children">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>Sierra Walmart has completely changed how I shop. The delivery is fast, and the prices are very competitive. I especially love the electronics section!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <h4>Aminata Kamara</h4>
+              <span>Freetown, Western Area</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>As a farmer in Bo, getting quality agricultural tools was always a challenge. Now I just order online and it arrives at my door. Amazing service!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <h4>Mohamed Sesay</h4>
+              <span>Bo, Southern Province</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>The variety of products is incredible. From groceries to fashion, I find everything I need. The customer service team is also very helpful and responsive.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FK</div>
+            <div class="author-info">
+              <h4>Fatmata Koroma</h4>
+              <span>Kenema, Eastern Province</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" id="newsletter">
+    <div class="container">
+      <div class="newsletter reveal">
+        <h2>Stay Updated with Our Deals</h2>
+        <p>Subscribe to our newsletter and get exclusive offers, new arrivals, and special discounts.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background:var(--bg-secondary)" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-subtitle reveal">Got questions? We've got answers</p>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does delivery work across Sierra Leone?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We deliver to all 16 districts in Sierra Leone. Delivery within Freetown takes 1-2 business days, while deliveries to other districts take 3-5 business days. You can track your order status in your account dashboard.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What payment methods are accepted?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We accept mobile money (Orange Money, Afrimoney), bank transfers, and cash on delivery. All payment methods are secure and verified.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I return or exchange products?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer a 7-day return policy for most products. If you receive a damaged or incorrect item, contact us within 48 hours for a full refund or exchange.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are the products genuine and authentic?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! We work directly with verified suppliers and brands to ensure all products sold on Sierra Walmart are 100% genuine and come with manufacturer warranties where applicable.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I create an account?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Creating an account is easy! Click the user icon in the navigation bar, then click "Create Account." Fill in your details and you'll be ready to shop in minutes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            🛒 Sierra<span class="highlight">Walmart</span>
+          </div>
+          <p>Sierra Leone's premier online marketplace. We bring quality products right to your doorstep at affordable prices across all 16 districts.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook" aria-label="Facebook">📘</a>
+            <a href="#" title="Twitter" aria-label="Twitter">🐦</a>
+            <a href="#" title="Instagram" aria-label="Instagram">📸</a>
+            <a href="#" title="WhatsApp" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a>`n        <a href="sell.html">Sell</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?search=Electronics">Electronics</a></li>
+            <li><a href="products.html?search=Fashion">Fashion</a></li>
+            <li><a href="products.html?search=Groceries">Groceries</a></li>
+            <li><a href="products.html?search=Home">Home & Kitchen</a></li>
+            <li><a href="products.html?search=Beauty">Beauty</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 15 Siaka Stevens St, Freetown</li>
+            <li>📞 +232 76 123 4567</li>
+            <li>✉️ info@sierrawalmart.com</li>
+            <li>🕐 Mon–Sat: 8am – 8pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sierra Walmart. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Render featured products (first 8)
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('featured-grid');
+      if (grid) {
+        const featured = PRODUCTS.slice(0, 8);
+        renderProducts(grid, featured);
+      }
+    });
+  </script>
+</body>
+</html>
